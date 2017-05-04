@@ -23,6 +23,15 @@ const APIUtil = {
       url: `/users/search`,
       data: {query: queryVal, success: success}
     });
+  },
+
+  createTweet: (data) => {
+    return $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      dataType: 'json',
+      data: data 
+    });
   }
 };
 
